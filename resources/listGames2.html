@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List of Games</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>List of Games</h1>
+  
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>GOALS TEAM 1</th>
+            <th>GOALS TEAM 2</th>
+            <th>LOCALIZACAO</th>
+            <th>DATA</th>
+            <th>VIEW</th>
+          </tr>
+          <tr th:each="s : ${games}">
+            <td th:text="${s.id}">id</td>
+            <td th:text="${s.name}">name</td>
+            <td th:text="${s.goals1}">goals1</td>
+            <td th:text="${s.goals2}">goals2</td>
+            <td th:text="${s.location}">location</td>
+            <td th:text="${s.date}">date</td>
+            <td><a th:href="@{showGame2(id=${s.id})}">view</a></td>
+          </tr>
+        </table>
+        <form th:action="@{/home}" method="get">
+            <div="form-row">
+                <button type="submit">Home</button>
+            </div>
+          </form>
+    </body>
+</html>

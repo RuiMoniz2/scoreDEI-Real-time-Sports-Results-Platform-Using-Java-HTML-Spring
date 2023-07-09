@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List of Teams</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>List of Teams</h1>
+  
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th><a th:href="@{'/listTeams3?field=numJogos&order=' + ${order}}">JOGOS</a></th>
+            <th><a th:href="@{'/listTeams3?field=numVitorias&order=' + ${order}}">VITORIAS</a></th>
+            <th><a th:href="@{'/listTeams3?field=numDerrotas&order=' + ${order}}">DERROTAS</a></th>
+            <th><a th:href="@{'/listTeams3?field=numEmpates&order=' + ${order}}">EMPATES</a></th>
+            
+          </tr>
+          <tr th:each="p : ${teams}">
+            <td th:text="${p.id}">id</td>
+            <td th:text="${p.name}">name</td>
+            <td th:text="${p.numJogos}">numjogos</td>
+            <td th:text="${p.numVitorias}">numvitorias</td>   
+            <td th:text="${p.numDerrotas}">numderrotas</td>
+            <td th:text="${p.numEmpates}">numempates</td>
+            
+          </tr>
+        </table>
+
+      </table>
+      <h1>Best Scorer</h1>
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>AGE</th>
+          <th>POSICAO</th>
+          <th>NUMERO GOLOS</th>
+          <th>TEAM</th>
+        </tr>
+          <td th:text="${player.id}">id</td>
+          <td th:text="${player.name}">name</td>
+          <td th:text="${player.age}">age</td>
+          <td th:text="${player.posicao}">posicao</td>
+          <td th:text="${player.goals}">goals</td>
+          <td th:text="${player.team}">teams</td>
+        </tr>
+      </table>
+
+        <br>
+    <br>
+
+    
+    <form th:action="@{/home}" method="get">
+      <div="form-row">
+          <button type="submit">Home</button>
+      </div>
+    </form>
+      
+    </body>
+</html>

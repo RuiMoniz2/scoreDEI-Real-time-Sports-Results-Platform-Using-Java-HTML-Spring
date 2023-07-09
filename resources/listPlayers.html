@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List of Players</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>List of Players</h1>
+  
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>POSICAO</th>
+            <th>TEAM</th>
+            <th>EDIT</th>
+          </tr>
+          <tr th:each="s : ${players}">
+            <td th:text="${s.id}">id</td>
+            <td th:text="${s.name}">name</td>
+            <td th:text="${s.age}">age</td>
+            <td th:text="${s.posicao}">posicao</td>
+            <td th:text="${s.team}">teams</td>
+            <td><a th:href="@{editPlayer(id=${s.id})}">edit</a></td>
+          </tr>
+        </table>
+
+        <form th:action="@{/admin}" method="get">
+          <div="form-row">
+              <button type="submit">HomePage Admin</button>
+          </div>
+        </form>
+      
+      
+    </body>
+</html>

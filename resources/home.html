@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"> 
+<title> scoreDEI </title>
+
+<h2>Bem vindo ao scoreDei</h2>
+<br>
+</head>
+<body>
+    <form th:action="@{/saveData}" method="post">
+        <div="form-row">
+            <button type="submit">Create Data</button>
+        </div>
+    </form>
+
+      <form th:action="@{/listTeams3}" method="get">
+        <div="form-row">
+            <button type="submit">Listar Equipas</button>
+        </div>
+      </form>
+
+      <form th:action="@{/listGames2}" method="get">
+        <div="form-row">
+            <button type="submit">Jogos</button>
+        </div>
+      </form>
+      <br>
+      <br>
+      <form th:action="@{/userLogin}" method="get">
+        <div="form-row">
+            <button type="submit">Login</button>
+        </div>
+      </form>
+
+    
+    
+</body>  

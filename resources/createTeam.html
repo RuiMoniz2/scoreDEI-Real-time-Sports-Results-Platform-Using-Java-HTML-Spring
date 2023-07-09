@@ -1,0 +1,36 @@
+<form th:action="@{/saveTeam}" th:object="${teams}" method="post">
+    <div="form-row">
+        <div>
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{name}">
+        </div>
+        <div>
+            <label>Num Jogos</label>
+            <input type="text" th:field="*{numJogos}">
+        </div>
+        <div>
+            <label>Num Vitorias</label>
+            <input type="text" th:field="*{numVitorias}">
+        </div>
+        <div>
+            <label>Num Derrotas</label>
+            <input type="text" th:field="*{numDerrotas}">
+        </div>
+        <div>
+            <label>Num Empates</label>
+            <input type="text" th:field="*{numEmpates}">
+        </div>
+        <button type="submit">Create Team</button>
+    </div>
+    <br>
+    <br>
+
+    <form th:action="@{/admin}" method="get">
+        <div="form-row">
+            <button type="submit">HomePage Admin</button>
+        </div>
+      </form>
+</form>

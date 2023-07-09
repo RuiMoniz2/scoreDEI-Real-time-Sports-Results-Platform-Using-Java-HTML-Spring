@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List of Teams</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>List of Teams</h1>
+  
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>JOGOS</th>
+            <th>VITÓRIAS</th>
+            <th>DERROTAS</th>
+            <th>EMPATES</th>
+            
+          </tr>
+          <tr th:each="p : ${teams}">
+            <td th:text="${p.id}">id</td>
+            <td th:text="${p.name}">name</td>
+            <td th:text="${p.numJogos}">numjogos</td>
+            <td th:text="${p.numVitorias}">numvitorias</td>
+            <td th:text="${p.numDerrotas}">numderrotas</td>
+            <td th:text="${p.numEmpates}">numempates</td>
+            
+          </tr>
+        </table>
+
+        <br>
+    <br>
+
+    <form th:action="@{/user}" method="get">
+      <div="form-row">
+          <button type="submit">User Home</button>
+      </div>
+    </form>
+
+    <form th:action="@{/home}" method="get">
+      <div="form-row">
+          <button type="submit">Home</button>
+      </div>
+    </form>
+      
+    </body>
+</html>

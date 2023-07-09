@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"> 
+<title> scoreDEI </title>
+</head>
+<body>
+    
+      <form th:action="@{/listTeams2}" method="get">
+        <div="form-row">
+            <button type="submit">Lista de Equipas</button>
+        </div>
+      </form>
+
+      <form th:action="@{/listGames3}" method="get">
+        <div="form-row">
+            <button type="submit">Criar Evento</button>
+        </div>
+      </form>
+      <br>
+      <br>
+      <br>
+
+      <form th:action="@{/home}" method="get">
+        <div="form-row">
+            <button type="submit">Logout</button>
+        </div>
+      </form>
+      
+    
+</body>  

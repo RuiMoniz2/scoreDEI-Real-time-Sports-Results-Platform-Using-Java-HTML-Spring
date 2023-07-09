@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List of Users</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>List of Users</h1>
+  
+        <table border="1">
+          <tr>
+            <th>NAME</th>
+            <th>PASSWORD</th>
+            <th>EMAIL</th>
+            <th>TELEPHONE</th>
+            <th>ROLE</th>
+            
+          </tr>
+          <tr th:each="u : ${user}">
+            <td th:text="${u.username}">username</td>
+            <td th:text="${u.password}">password</td>
+            <td th:text="${u.email}">email</td>
+            <td th:text="${u.telephone}">telephone</td>
+            <td th:text="${u.role}">role</td>
+            
+          </tr>
+        </table>
+
+        <br>
+    <br>
+
+    <form th:action="@{/admin}" method="get">
+      <div="form-row">
+          <button type="submit">Home Admin</button>
+      </div>
+    </form>
+
+    <form th:action="@{/home}" method="get">
+        <div="form-row">
+            <button type="submit">Home</button>
+        </div>
+      </form>
+      
+    </body>
+</html>

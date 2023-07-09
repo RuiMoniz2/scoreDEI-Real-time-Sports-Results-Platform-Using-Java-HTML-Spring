@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Best Scorer</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>Best Scorer</h1>
+  
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>POSICAO</th>
+            <th>NUMERO GOLOS</th>
+            <th>TEAM</th>
+          </tr>
+            <td th:text="${player.id}">id</td>
+            <td th:text="${player.name}">name</td>
+            <td th:text="${player.age}">age</td>
+            <td th:text="${player.posicao}">posicao</td>
+            <td th:text="${player.goals}">goals</td>
+            <td th:text="${player.team}">teams</td>
+          </tr>
+        </table>
+
+        <form th:action="@{/home}" method="get">
+          <div="form-row">
+              <button type="submit">Home</button>
+          </div>
+        </form>
+      
+      
+    </body>
+</html>

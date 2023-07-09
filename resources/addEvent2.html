@@ -1,0 +1,23 @@
+<form th:action="@{/saveEvent2}" th:object="${event}"  method="post">
+    <div="form-row">
+        <h1>Add Event</h1>
+        <div>
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <div>
+            <label>Type</label>
+            <input type="text" th:field="*{type}">
+        </div>       
+        <div>
+            <label>Time</label>
+            <input type="text" th:field="*{time}">
+        </div>
+        <button type="submit">Add Event</button>
+    </div>
+
+    <form th:action="@{/userReload}" method="get">
+        <div="form-row">
+            <button type="submit">Back</button>
+        </div>
+      </form>
+</form>

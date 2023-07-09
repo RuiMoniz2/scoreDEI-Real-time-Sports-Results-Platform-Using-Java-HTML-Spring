@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"> 
+<title> scoreDEI </title>
+</head>
+
+<h2> Bem vindo, Admin </h2>
+<body>
+        <br>
+        <h3> Team Settings</h3> 
+      <form th:action="@{/createTeam}" method="get">
+        <div="form-row">
+            <button type="submit">Criar Equipa</button>
+        </div>
+      </form>
+      <br>
+      <form th:action="@{/listTeams}" method="get">
+        <div="form-row">
+            <button type="submit">Listar/Editar Equipas</button>
+        </div>
+      </form>
+      <br>
+      <h3> Player Settings</h3> 
+      
+      <form th:action="@{/createPlayer}" method="get">
+        <div="form-row">
+            <button type="submit">Criar Jogador</button>
+        </div>
+      </form>
+
+      <form th:action="@{/listPlayers}" method="get">
+        <div="form-row">
+            <button type="submit">Listar/Editar Jogador</button>
+        </div>
+      </form>
+      <br>
+      <h3> Game Settings</h3> 
+      
+      <form th:action="@{/createGame}" method="get">
+        <div="form-row">
+            <button type="submit">Criar Game</button>
+        </div>
+      </form>
+
+      <form th:action="@{/listGames}" method="get">
+        <div="form-row">
+            <button type="submit">Listar/Editar Game</button>
+        </div>
+      </form>
+
+
+      <h3> User Settings</h3> 
+      
+      <form th:action="@{/listUsers}" method="get">
+        <div="form-row">
+            <button type="submit">ListarUsers</button>
+        </div>
+      </form>
+      
+      <form th:action="@{/userRegist}" method="get">
+        <div="form-row">
+            <button type="submit">Registar User</button>
+        </div>
+        
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>
+      <form th:action="@{/home}" method="get">
+        <div="form-row">
+            <button type="submit">Logout</button>
+        </div>
+      </form>
+    
+</body>  

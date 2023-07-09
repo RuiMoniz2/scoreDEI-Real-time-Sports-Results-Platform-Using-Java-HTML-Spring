@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Showing Game</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>Game</h1>
+  
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>GOALS TEAM 1</th>
+            <th>GOALS TEAM 2</th>
+            <th>LOCALIZACAO</th>
+            <th>DATA</th>
+            <th>CRIAR</th>
+            
+          </tr>
+            <td th:text="${game.id}">id</td>
+            <td th:text="${game.name}">name</td>
+            <td th:text="${game.goals1}">goals1</td>
+            <td th:text="${game.goals2}">goals2</td>
+            <td th:text="${game.location}">location</td>
+            <td th:text="${game.date}">date</td>
+            <td><a th:href="@{addEvent2(id=${game.id})}">edit</a></td>
+            
+          </tr>
+        </table>
+        <h2>Eventos</h2>
+    
+        <table border="1">
+          <tr>
+            <th>ID</th>
+            <th>TYPE</th>
+            <th>MINUTES</th>
+          </tr>
+          <tr th:each="e : ${events}">
+            <td th:text="${e.id}">id</td>
+            <td th:text="${e.type}">type</td>
+            <td th:text="${e.time}">time</td>
+          </tr>
+        </table>
+        
+        <br>
+        <form th:action="@{/user}" method="get">
+          <div="form-row">
+              <button type="submit">Home User</button>
+          </div>
+        </form>
+        <form th:action="@{/home}" method="get">
+          <div="form-row">
+              <button type="submit">Home</button>
+          </div>
+        </form>
+        <br>
+        <form th:action="@{/listGames}" method="get">
+          <div="form-row">
+              <button type="submit">Back</button>
+          </div>
+        </form>
+    </body>
+</html>

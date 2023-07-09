@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Showing Game</title>
+        <meta charset="utf8"/>
+    </head>
+    <body>
+        <h1>Game</h1>
+        
+        <table border="1">
+            <tr>
+            <th>ID</th>
+            <th>TYPE</th>
+            <th>MINUTES</th>
+            </tr>
+            <tr th:each="e : ${events}">
+            <td th:text="${e.id}">id</td>
+            <td th:text="${e.type}">type</td>
+            <td th:text="${e.time}">time</td>
+            </tr>
+        </table>
+
+    </body>
+    </html>
